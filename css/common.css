@@ -99,6 +99,8 @@ p > a {
   flex-wrap: wrap;
   gap: 24px;
   justify-content: center;
+  max-width: 1128px;
+  align-self: center;
 }
 
 .gallery-item {
@@ -215,6 +217,7 @@ label input {
 #boxes {
   display: flex;
   gap: 15px;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 .box {
@@ -230,7 +233,7 @@ label input {
 }
 
 #controls {
-  min-width: 200px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -238,20 +241,18 @@ label input {
 }
 
 #controls input {
-  padding: 5px;
+  padding: 10px;
   outline: 2px solid rgb(150, 148, 148);
 }
 
 #controls button[data-create] {
   background-color: lightgreen;
-  padding: 2px;
-  max-width: 80px;
+  padding: 10px;
   cursor: pointer;
 }
 #controls button[data-destroy] {
   background-color: lightcoral;
-  padding: 2px;
-  max-width: 80px;
+  padding: 10px;
   cursor: pointer;
 }
 

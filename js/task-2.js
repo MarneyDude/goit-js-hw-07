@@ -28,15 +28,14 @@ const images = [
 function addImages(arr) {
   const gallery = document.querySelector(".gallery");
 
-  arr.forEach((dataObject) => {
-    gallery.insertAdjacentHTML(
-      "afterbegin",
-
-      `<li class="gallery-item">
+  const galleryMarkup = arr
+    .map((dataObject) => {
+      return `<li class="gallery-item">
       <img class="gallery-image" src="${dataObject.url}" alt="${dataObject.alt}" />
-    </li>`
-    );
-  });
-}
+    </li>`;
+    })
+    .join("");
 
+  gallery.insertAdjacentHTML("afterbegin", galleryMarkup);
+}
 addImages(images);
